@@ -1,6 +1,8 @@
 ---
 import { SEO } from "astro-seo";
-import "@fontsource-variable/inter";
+import "@fontsource-variable/montserrat";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <html class="scroll-smooth" lang="en">
@@ -40,6 +42,26 @@ import "@fontsource-variable/inter";
     />
   </head>
   <body>
+    <Nav />
     <slot />
+    <Footer />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modals = document.querySelectorAll(
+          "dialog"
+        ) as NodeListOf<HTMLDialogElement>;
+        modals.forEach((modal) => {
+          modal.addEventListener("close", (event) => {
+            document.body.classList.remove("overflow-hidden");
+          });
+
+          modal.addEventListener("click", (event) => {
+            if ((event.target as HTMLElement).nodeName === "DIALOG") {
+              modal.close();
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import stronger from "../assets/stronger-header.png";
+
+const essentialColors = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/colors/Essential/*.{jpeg,jpg,png,gif}"
+);
+
+const specialtyColors = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/colors/Specialty/*.{jpeg,jpg,png,gif}"
+);
+
+console.log(specialtyColors);
+---
+
+<Layout>
+  <div class="max-w-6xl mx-auto mb-10">
+    <Image src={stronger} alt="Graphene" />
+    <div class="my-10">
+      <div class="px-4">
+        <h2 class="text-3xl font-semibold tracking-tight">
+          Essential Range – Pool ColorGuard
+        </h2>
+        <p class="mb-6 font-light lg:mb-8 md:text-lg lg:text-xl mt-4">
+          The ColorGuard pools range of colors will maintain their beautiful
+          appearance and vivid color for many years.
+
+          <p class="mb-6 font-light lg:mb-8 md:text-lg lg:text-xl mt-4">
+            The most popular colors by far, they suit any of our pool designs
+            and look amazing day or night.
+          </p>
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10 place-items-center"
+        >
+          {
+            Object.keys(essentialColors).map(async (image) => (
+              <div class="w-full max-w-md">
+                <Image
+                  src={(await essentialColors[image]()).default}
+                  alt=""
+                  class=""
+                />
+                <p class="text-xl font-semibold tracking-tight text-center capitalize mt-2">
+                  {image.split("/").pop().split(".")[0].replace("_", " ")}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="px-4">
+        <h2 class="text-3xl font-semibold tracking-tight">Specialty Range</h2>
+        <p class="mb-6 font-light lg:mb-8 md:text-lg lg:text-xl mt-4">
+          If you are after something different, then our Specialty Range may be
+          just what you are looking for.
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-10"
+        >
+          {
+            Object.keys(specialtyColors).map(async (image) => (
+              <div class="w-full max-w-md">
+                <Image
+                  src={(await specialtyColors[image]()).default}
+                  alt=""
+                  class=""
+                />
+                <p class="text-xl font-semibold tracking-tight text-center capitalize mt-2">
+                  {image.split("/").pop().split(".")[0].replace("_", " ")}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

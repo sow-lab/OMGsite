@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import stronger from "../assets/stronger-header.png";
+import color from "../assets/color-image.jpg";
+---
+
+<Layout>
+  <div class="max-w-6xl mx-auto mb-10">
+    <Image src={stronger} alt="Graphene" />
+    <div class="my-10">
+      <div class="px-4">
+        <h2 class="text-3xl font-semibold tracking-tight">
+          Superior Pool ColorGuard Pools
+        </h2>
+        <p class="mb-6 font-light lg:mb-8 md:text-lg lg:text-xl mt-4">
+          Only Aqua Technics Pools can offer you a patented surface protection
+          system for fiberglass swimming pools that resists the effects of ultra
+          violet rays and chemical attack. It’s like sunscreen for your swimming
+          pool, protecting it from color loss and weathering. Incorporating a
+          specialized dual coat system as part of the manufacturing process, two
+          layers are merged to provide extraordinary surface protection.
+          <p class="mb-6 font-light lg:mb-8 md:text-lg lg:text-xl mt-4">
+            With a brilliant, high gloss finish that lasts year after year, your
+            swimming pool will maintain its beautiful appearance thanks to the
+            innovative and unique Pool ColorGuard. We dare you to compare.
+          </p>
+        </p>
+      </div>
+    </div>
+    <div>
+      <Image src={color} alt="pool" class="object-cover" />
+    </div>
+  </div>
+</Layout>

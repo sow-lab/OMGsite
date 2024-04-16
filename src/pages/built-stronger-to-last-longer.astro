@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import stronger from "../assets/stronger-header.png";
+import side from "../assets/stronger-side.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+  <div class="max-w-6xl mx-auto mb-10">
+    <Image src={stronger} alt="Graphene" />
+    <div
+      class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-2 sm:p-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+    >
+      <div class="mr-auto place-self-center lg:col-span-5">
+        <h2 class="text-3xl font-semibold tracking-tight">
+          Why we only build pools with 8″ fiberglass coping
+        </h2>
+        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl mt-4">
+          The design of the 8” wide fiberglass coping means the strength is
+          engineered into the pool – your pool is built stronger to last longer.
+        </p>
+      </div>
+      <div class="flex lg:mt-0 lg:col-span-7">
+        <div>
+          <Image src={side} alt="pool" class="object-cover" />
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3">
+      <div class="flex flex-col bg-blue-100 pl-4 sm:pl-0 min-h-44">
+        <div class="mx-auto p-2 sm:p-8">
+          <p class="text-xl mb-6 font-semibold">Swimming Pool Technology</p>
+          <div class="flex gap-4">
+            <div class="aspect-square h-14 w-auto">
+              <Icon
+                name="sun"
+                size={40}
+                class="rounded-full bg-blue-500 text-white w-full h-full p-1 border-blue-700 border-4"
+              />
+            </div>
+            <p>
+              Exclusive patented Pool ColorGuard technology <br />World’s only
+              surface protection system that resists the effects of UV rays and
+              chemicals <br />Protects your pool from color loss and weathering
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col bg-blue-100 pl-4 sm:pl-0 min-h-44">
+        <div class="mx-auto p-2 sm:p-8">
+          <p class="text-xl mb-6 font-semibold">Superior Strength</p>
+          <div class="flex gap-4">
+            <div class="aspect-square h-14 w-auto">
+              <Icon
+                name="wood"
+                size={40}
+                class="rounded-full bg-blue-500 text-white w-full h-full p-1 border-blue-700 border-4"
+              />
+            </div>
+            <p>
+              Fully supported steps & bench seating
+              <br />8″ wider fiberglass coping making the pool structurally
+              independent <br />High tensile strength fiberglass – pools are up
+              to 20% stronger
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col bg-blue-100 pl-4 sm:pl-0 min-h-44">
+        <div class="mx-auto p-2 sm:p-8">
+          <p class="text-xl mb-6 font-semibold">Superior Materials</p>
+          <div class="flex gap-4">
+            <div class="aspect-square h-14 w-auto">
+              <Icon
+                name="beaker"
+                size={40}
+                class="rounded-full bg-blue-500 text-white w-full h-full p-1 border-blue-700 border-4"
+              />
+            </div>
+            <p>
+              Manufactured using new generation, corrosion resistant,
+              eco-friendly fiberglass with improved strength and stiffness
+              <br />Daily on-site batching of materials resulting in a better
+              product <br />Only specialty materials are used – no general
+              purpose products
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col bg-blue-100 pl-4 sm:pl-0 min-h-44">
+        <div class="mx-auto p-2 sm:p-8">
+          <p class="text-xl mb-6 font-semibold">Precision Moulds</p>
+          <div class="flex gap-4">
+            <div class="aspect-square h-14 w-auto">
+              <Icon
+                name="target"
+                size={40}
+                class="rounded-full bg-blue-500 text-white w-full h-full p-1 border-blue-700 border-4"
+              />
+            </div>
+            <p>
+              New designs built to exacting tolerances
+
+              <br />Fiberglass coping are true and the shapes are geometrically
+              perfect
+              <br />Surface finish without peer
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col bg-blue-100 pl-4 sm:pl-0 min-h-44">
+        <div class="mx-auto p-2 sm:p-8">
+          <p class="text-xl mb-6 font-semibold">Quality Assured</p>
+          <div class="flex gap-4">
+            <div class="aspect-square h-14 w-auto">
+              <Icon
+                name="tick"
+                size={40}
+                class="rounded-full bg-blue-500 text-white w-full h-full p-1 border-blue-700 border-4"
+              />
+            </div>
+            <p>
+              Comply with Quality Management System ISO 9001<br />Tested by an
+              authorized, independent auditor
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col bg-blue-100 pl-4 sm:pl-0 min-h-44">
+        <div class="mx-auto p-2 sm:p-8">
+          <p class="text-xl mb-6 font-semibold">Extended Warranties</p>
+          <div class="flex gap-4">
+            <div class="aspect-square h-14 w-auto">
+              <Icon
+                name="medal"
+                size={40}
+                class="rounded-full bg-blue-500 text-white w-full h-full p-1 border-blue-700 border-4"
+              />
+            </div>
+            <p>
+              Limited Lifetime Structural Warranty
+              <br />Our commitment to providing extended warranties above the
+              industry standard
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

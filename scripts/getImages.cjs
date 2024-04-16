@@ -88,5 +88,5 @@ async function downloadImagesFromJSON(jsonFilePath, outputFolder) {
 
 // Usage example
 const jsonFilePath = "pools_data.json";
-const outputFolder = "downloaded_images";
+const outputFolder = "downloaded_images2";
 downloadImagesFromJSON(jsonFilePath, outputFolder);

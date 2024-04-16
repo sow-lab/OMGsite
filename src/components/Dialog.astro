@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import type { Pool } from "../pages/range.astro";
+
+interface Props {
+  pool: Pool;
+  image: ImageMetadata;
+  sizeImage: ImageMetadata;
+  related: { link: string; image: ImageMetadata }[];
+}
+const { pool, image, sizeImage, related } = Astro.props;
+---
+
+<dialog
+  id={pool.name.replace(/[-\s]/g, "").toLowerCase()}
+  class="overflow-x-hidden h-[90vh] backdrop-blur-xl md:border-2 md:rounded-xl backdrop:bg-neutral-800/80 mx-auto open:animate-fade-in"
+>
+  <form method="dialog">
+    <main class="px-7 pb-6 bg-white max-w-3xl">
+      <button
+        class="sticky top-0 float-right translate-x-7 text-black focus:outline-none"
+        ><Icon name="close" size={30} /></button
+      >
+      <div class="max-w-3xl mx-auto">
+        <Image class="h-full w-full object-cover" src={image} alt="test" />
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between py-4 sm:items-end">
+        <p
+          class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 capitalize"
+        >
+          {pool.name}
+        </p>
+        <div class="flex gap-4">
+          <p
+            class="bg-blue-500 text-white text-base text-center capitalize p-4 leading-7 item-center"
+          >
+            {pool.dimension1}
+          </p>
+          <p
+            class="bg-blue-500 text-white text-base text-center capitalize p-4 leading-7 item-center"
+          >
+            {pool.dimension2}
+          </p>
+        </div>
+      </div>
+      <p class="scroll-m-20 text-xl font-semibold tracking-tight">
+        {pool.subTitle}
+      </p>
+      <p class="leading-7 [&:not(:first-child)]:mt-6 max-w-2xl">
+        {pool.text}
+      </p>
+      <div
+        class="flex flex-col-reverse sm:flex-row justify-between bg-blue-100 p-4"
+      >
+        <ul class="list-disc list-inside my-4 space-y-2">
+          {
+            pool.liText.map((feature) => (
+              <li class="tracking-tight">{feature}</li>
+            ))
+          }
+        </ul>
+        <div class="max-h-36 w-1/2">
+          <Image class="h-full object-contain" src={sizeImage} alt="test" />
+        </div>
+      </div>
+      {
+        related.length > 0 && (
+          <>
+            <p class="scroll-m-20 text-xl font-semibold tracking-tight my-4">
+              Also In This Series
+            </p>
+            <div class="flex flex-wrap gap-4">
+              {related.map((link) => (
+                <a href={link.link}>
+                  <div class="max-h-36">
+                    <Image
+                      class="h-full object-contain"
+                      src={link.image}
+                      alt="test"
+                    />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </>
+        )
+      }
+    </main>
+  </form>
+</dialog>
+
+<style>
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+</style>
