@@ -72,7 +72,9 @@ const { pool, image, sizeImage, related } = Astro.props;
             </p>
             <div class="flex flex-wrap gap-4">
               {related.map((link) => (
-                <a href={link.link}>
+                <button
+                  onclick={`window.${link.link.replace(/[-\s]/g, "").toLowerCase()}.showModal(); document.body.classList.add('overflow-hidden')`}
+                >
                   <div class="max-h-36">
                     <Image
                       class="h-full object-contain"
@@ -80,7 +82,7 @@ const { pool, image, sizeImage, related } = Astro.props;
                       alt="test"
                     />
                   </div>
-                </a>
+                </button>
               ))}
             </div>
           </>

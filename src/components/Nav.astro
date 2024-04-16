@@ -40,16 +40,17 @@ import { Icon } from "astro-icon/components";
         >Quality</button
       >
       <ul
+        id="dropdown"
         class="max-h-0 h-36 peer-hover:max-h-36 overflow-hidden hover:max-h-36 absolute top-2 pt-6 left-0 flex-col transition-all duration-500 ease-in-out z-[-1]"
       >
-        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2">
+        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
           <a
             class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
             href="/graphene-nano-technology"
             >Graphene Nano Technology
           </a>
         </li>
-        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2">
+        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
           <a
             class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
             href="/built-stronger-to-last-longer
@@ -57,7 +58,7 @@ import { Icon } from "astro-icon/components";
             >Built Stronger To Last Longer
           </a>
         </li>
-        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2">
+        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
           <a
             class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
             href="/superior-pool-colorguard-pools"
@@ -81,7 +82,7 @@ import { Icon } from "astro-icon/components";
     <li>
       <a
         class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
-        href="/#">Contact</a
+        href="/contact">Contact</a
       >
     </li>
   </ul>
@@ -171,7 +172,7 @@ import { Icon } from "astro-icon/components";
         <li class="mb-1">
           <a
             class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
-            href="/#">Contact</a
+            href="/contact">Contact</a
           >
         </li>
       </ul>
@@ -229,5 +230,22 @@ import { Icon } from "astro-icon/components";
         });
       }
     }
+  });
+
+  // For accessability
+  const menuItems = document.querySelectorAll(".submenu");
+  const dropdown = document.getElementById("dropdown");
+
+  // Add event listeners to each li element
+  menuItems.forEach((item) => {
+    item.addEventListener("focusin", () => {
+      // Add a class to the menu when an li element is focused
+      dropdown.classList.remove("max-h-0");
+    });
+
+    item.addEventListener("focusout", () => {
+      // Remove the class from the menu when the focus leaves the li element
+      dropdown.classList.add("max-h-0");
+    });
   });
 </script>
