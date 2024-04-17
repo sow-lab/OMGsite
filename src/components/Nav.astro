@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import logo from "../assets/logo.jpg";
 ---
 
 <nav
@@ -7,245 +9,239 @@ import { Icon } from "astro-icon/components";
   class="relative px-4 py-4 flex justify-between items-start bg-white max-w-6xl mx-auto h-36"
 >
   <a
-    class="text-xl align-middle font-bold leading-none flex items-center gap-2"
+    class="text-xl align-middle font-bold leading-none flex items-center  gap-2"
     href="/"
   >
-    <Icon name="logo" size={32} />
-    <h1>Freedom Fiberglass Pools</h1>
+    <div class="h-32 w-auto">
+      <Image src={logo} alt="logo" class="h-full w-full object-contain" />
+      <p class="sr-only">Freedom Fiberglass Pools</p>
+    </div>
   </a>
-  <div class="lg:hidden">
-    <button class="navbar-burger flex items-center text-blue-600 p-3">
-      <svg
-        class="block h-6 w-6 fill-current"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/1000/svg"
-      >
-        <title>Mobile menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-    </button>
-  </div>
-  <ul
-    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:top-8 lg:mx-auto lg:flex lg:divide-x lg:items-center lg:w-auto lg:space-x-6"
-  >
-    <li>
-      <a
-        class="text-base text-gray-700 hover:underline underline-offset-8"
-        href="/">Home</a
-      >
-    </li>
-    <li class="relative w-full">
-      <button
-        class="text-base text-gray-700 hover:underline underline-offset-8 pl-4 peer"
-        >Quality</button
-      >
-      <ul
-        id="dropdown"
-        class="max-h-0 h-36 peer-hover:max-h-36 overflow-hidden hover:max-h-36 absolute top-2 pt-6 left-0 flex-col transition-all duration-500 ease-in-out z-[-1]"
-      >
-        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
-          <a
-            class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
-            href="/graphene-nano-technology"
-            >Graphene Nano Technology
-          </a>
-        </li>
-        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
-          <a
-            class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
-            href="/built-stronger-to-last-longer
-         "
-            >Built Stronger To Last Longer
-          </a>
-        </li>
-        <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
-          <a
-            class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
-            href="/superior-pool-colorguard-pools"
-            >Superior Pool Colorguard Pools
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a
-        class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
-        href="/colors">Colors</a
-      >
-    </li>
-    <li>
-      <a
-        class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
-        href="/range">Pools</a
-      >
-    </li>
-    <li>
-      <a
-        class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
-        href="/contact">Contact</a
-      >
-    </li>
-  </ul>
-  <a
-    class="lg:flex items-center gap-2 hidden py-2 px-6 bg-blue-500 hover:bg-blue-600 text-base text-white font-bold rounded-xl transition duration-100"
-    href="tel:8008655066"
-    ><Icon name="telephone" size={20} />
-    <p>Call Us</p></a
-  >
-</nav>
-<div class="navbar-menu relative z-50 hidden">
-  <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-  <nav
-    class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
-  >
-    <div class="flex items-center mb-8">
-      <a class="mr-auto text-3xl font-bold leading-none" href="/#">
-        <Icon name="logo" size={32} />
-      </a>
-      <button class="navbar-close">
+    <div class="lg:hidden">
+      <button class="navbar-burger flex items-center text-blue-600 p-3">
         <svg
-          class="h-8 w-8 text-gray-700 cursor-pointer h8ver:text-gray-500"
+          class="block h-6 w-6 fill-current"
+          viewBox="0 0 20 20"
           xmlns="http://www.w3.org/1000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"></path>
+          <title>Mobile menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
         </svg>
       </button>
     </div>
-    <div>
-      <ul>
-        <li class="mb-1">
-          <a
-            class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
-            href="/">Home</a
-          >
-        </li>
-        <li class="mb-1">
-          <a
-            class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
-            href="/#about">Colors</a
-          >
-        </li>
-        <li class="mb-1">
-          <div
-            class="block px-4 pt-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
-          >
-            Quality
-          </div>
-          <ul class="flex flex-col gap-4 p-4">
-            <li>
-              <a
-                class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
-                href="/graphene-nano-technology"
-                >Graphene Nano Technology
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
-                href="/built-stronger-to-last-longer
-             "
-                >Built Stronger To Last Longer
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
-                href="/superior-pool-colorguard-pools"
-                >Superior Pool Colorguard Pools
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="mb-1">
-          <a
-            class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
-            href="/range">Pools</a
-          >
-        </li>
-        <li class="mb-1">
-          <a
-            class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
-            href="/contact">Contact</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="mt-auto">
-      <div class="pt-6">
+    <ul
+      class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:top-8 lg:mx-auto lg:flex lg:divide-x lg:items-center lg:w-auto lg:space-x-6"
+    >
+      <li>
         <a
-          class="flex items-center gap-2 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-base text-white font-bold rounded-xl transition duration-100"
-          href="tel:5551234567"
-          ><Icon name="telephone" size={20} />
-          <p>Call Us</p></a
+          class="text-base text-gray-700 hover:underline underline-offset-8"
+          href="/">Home</a
         >
+      </li>
+      <li class="relative w-full">
+        <button
+          class="text-base text-gray-700 hover:underline underline-offset-8 pl-4 peer"
+          >Quality</button
+        >
+        <ul
+          id="dropdown"
+          class="max-h-0 h-36 peer-hover:max-h-36 overflow-hidden hover:max-h-36 absolute top-2 pt-6 left-0 flex-col transition-all duration-500 ease-in-out z-[-1]"
+        >
+          <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
+            <a
+              class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
+              href="/graphene-nano-technology"
+              >Graphene Nano Technology
+            </a>
+          </li>
+          <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
+            <a
+              class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
+              href="/built-stronger-to-last-longer
+         "
+              >Built Stronger To Last Longer
+            </a>
+          </li>
+          <li class="bg-blue-100 pb-1.5 hover:bg-blue-200 px-2 submenu">
+            <a
+              class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
+              href="/superior-pool-colorguard-pools"
+              >Superior Pool Colorguard Pools
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a
+          class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
+          href="/colors">Colors</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
+          href="/range">Pools</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-base text-gray-700 hover:underline underline-offset-8 pl-4"
+          href="/contact">Contact</a
+        >
+      </li>
+    </ul>
+    <a
+      class="lg:flex items-center gap-2 hidden py-2 px-6 bg-blue-500 hover:bg-blue-600 text-base text-white font-bold rounded-xl transition duration-100"
+      href="tel:8008655066"
+      ><Icon name="telephone" size={20} />
+      <p>Call Us</p></a
+    >
+  </a>
+  <div class="navbar-menu relative z-50 hidden">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav
+      class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+    >
+      <div class="flex items-start mb-8">
+        <a class="mr-auto text-3xl font-bold leading-none" href="/">
+          <div class="h-32 w-auto">
+            <Image src={logo} alt="logo" class="h-full w-full object-contain" />
+            <p class="sr-only">Freedom Fiberglass Pools</p>
+          </div>
+        </a>
+        <button class="navbar-close">
+        <Icon name="close" size={40} />
+        </button>
       </div>
-    </div>
-  </nav>
-</div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
+              href="/">Home</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
+              href="/#about">Colors</a
+            >
+          </li>
+          <li class="mb-1">
+            <div
+              class="block px-4 pt-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
+            >
+              Quality
+            </div>
+            <ul class="flex flex-col gap-4 p-4">
+              <li>
+                <a
+                  class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
+                  href="/graphene-nano-technology"
+                  >Graphene Nano Technology
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
+                  href="/built-stronger-to-last-longer
+             "
+                  >Built Stronger To Last Longer
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-base text-gray-700 pb-2 hover:underline underline-offset-8 whitespace-nowrap"
+                  href="/superior-pool-colorguard-pools"
+                  >Superior Pool Colorguard Pools
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
+              href="/range">Pools</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block p-4 text-base font-semibold text-gray-700 hover:bg-blue-500 hover:text-blue-600 rounded"
+              href="/contact">Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div class="pt-6">
+          <a
+            class="flex items-center gap-2 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-base text-white font-bold rounded-xl transition duration-100"
+            href="tel:5551234567"
+            ><Icon name="telephone" size={20} />
+            <p>Call Us</p></a
+          >
+        </div>
+      </div>
+    </nav>
+  </div>
 
-<script>
-  // Burger menus
-  document.addEventListener("DOMContentLoaded", function () {
-    // open
-    const burger = document.querySelectorAll(".navbar-burger");
-    const menu = document.querySelectorAll(".navbar-menu");
+  <script>
+    // Burger menus
+    document.addEventListener("DOMContentLoaded", function () {
+      // open
+      const burger = document.querySelectorAll(".navbar-burger");
+      const menu = document.querySelectorAll(".navbar-menu");
 
-    if (burger.length && menu.length) {
-      for (var i = 0; i < burger.length; i++) {
-        burger[i].addEventListener("click", function () {
-          for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle("hidden");
-          }
-        });
+      if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+          burger[i].addEventListener("click", function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle("hidden");
+            }
+          });
+        }
       }
-    }
 
-    // close
-    const close = document.querySelectorAll(".navbar-close");
-    const backdrop = document.querySelectorAll(".navbar-backdrop");
+      // close
+      const close = document.querySelectorAll(".navbar-close");
+      const backdrop = document.querySelectorAll(".navbar-backdrop");
 
-    if (close.length) {
-      for (var i = 0; i < close.length; i++) {
-        close[i].addEventListener("click", function () {
-          for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle("hidden");
-          }
-        });
+      if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+          close[i].addEventListener("click", function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle("hidden");
+            }
+          });
+        }
       }
-    }
 
-    if (backdrop.length) {
-      for (var i = 0; i < backdrop.length; i++) {
-        backdrop[i].addEventListener("click", function () {
-          for (var j = 0; j < menu.length; j++) {
-            menu[j].classList.toggle("hidden");
-          }
-        });
+      if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+          backdrop[i].addEventListener("click", function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle("hidden");
+            }
+          });
+        }
       }
-    }
-  });
-
-  // For accessability
-  const menuItems = document.querySelectorAll(".submenu");
-  const dropdown = document.getElementById("dropdown");
-
-  // Add event listeners to each li element
-  menuItems.forEach((item) => {
-    item.addEventListener("focusin", () => {
-      // Add a class to the menu when an li element is focused
-      dropdown.classList.remove("max-h-0");
     });
 
-    item.addEventListener("focusout", () => {
-      // Remove the class from the menu when the focus leaves the li element
-      dropdown.classList.add("max-h-0");
+    // For accessability
+    const menuItems = document.querySelectorAll(".submenu");
+    const dropdown = document.getElementById("dropdown");
+
+    // Add event listeners to each li element
+    menuItems.forEach((item) => {
+      item.addEventListener("focusin", () => {
+        // Add a class to the menu when an li element is focused
+        dropdown.classList.remove("max-h-0");
+      });
+
+      item.addEventListener("focusout", () => {
+        // Remove the class from the menu when the focus leaves the li element
+        dropdown.classList.add("max-h-0");
+      });
     });
-  });
-</script>
+  </script>
+</nav>

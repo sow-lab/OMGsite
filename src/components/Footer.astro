@@ -1,5 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
+import logo from "../assets/logo.jpg";
+import { Image } from "astro:assets";
+
 ---
 
 <footer class="bg-blue-100">
@@ -28,16 +31,17 @@ import { Icon } from "astro-icon/components";
 
     <div class="lg:flex lg:items-end lg:justify-between">
       <div>
-        <div class="flex justify-center text-blue-600 lg:justify-start">
+        <div class="flex justify-center lg:justify-start">
           <a
-            class="text-xl align-middle font-bold leading-none flex items-center gap-2"
+            class="text-xl align-middle font-bold leading-none flex items-center gap-2 "
             href="/"
           >
-            <Icon name="logo" size={32} />
-            <p>Freedom Fiberglass Pools</p>
+          <div class="h-32 w-auto ">
+            <Image src={logo} alt="logo" class="h-full w-full object-contain" />
+            <p class="sr-only">Freedom Fiberglass Pools</p>
+          </div>
           </a>
         </div>
-
         <p
           class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
         >
