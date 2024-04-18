@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon/components";
 import logo from "../assets/logo.jpg";
 import { Image } from "astro:assets";
-
 ---
 
 <footer class="bg-blue-100">
@@ -33,66 +32,101 @@ import { Image } from "astro:assets";
       <div>
         <div class="flex justify-center lg:justify-start">
           <a
-            class="text-xl align-middle font-bold leading-none flex items-center gap-2 "
+            class="text-xl align-middle font-bold leading-none flex items-center gap-2"
             href="/"
           >
-          <div class="h-32 w-auto ">
-            <Image src={logo} alt="logo" class="h-full w-full object-contain" />
-            <p class="sr-only">Freedom Fiberglass Pools</p>
-          </div>
+            <div class="h-32 w-auto">
+              <Image
+                src={logo}
+                alt="logo"
+                class="h-full w-full object-contain"
+              />
+              <p class="sr-only">Freedom Fiberglass Pools</p>
+            </div>
           </a>
         </div>
         <p
           class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
         >
-        At Freedom Fiberglass Pools, we're not just in the business of building pools; we're dedicated to creating spaces where families can make lasting memories and find true relaxation right in their own backyard.
+          At Freedom Fiberglass Pools, we're not just in the business of
+          building pools; we're dedicated to creating spaces where families can
+          make lasting memories and find true relaxation right in their own
+          backyard.
         </p>
       </div>
+      <div class="flex flex-col gap-10">
+        <div class="hidden lg:flex h-full items-center">
+          <div class="border-r-4 border-black">
+            <a
+              class="lg:flex items-center gap-2 hidden py-2 px-6 text-2xl text-black font-bold rounded-xl transition duration-100"
+              href="TODO"
+            >
+              <p>(844) 440-1600</p></a
+            >
+            <a
+              class="lg:flex items-center gap-2 hidden py-2 px-6 text-2xl text-black font-semibold rounded-xl transition duration-100"
+              href="TODO"
+            >
+              <p>info@aquatechnicspools.com</p>
+            </a>
+          </div>
+          <div class="flex flex-col gap-1 px-2 justify-between">
+            <a href="TODO">
+              <Icon name="insta" size={40} />
+            </a>
+            <a href="TODO">
+              <Icon name="facebook" size={40} />
+            </a>
+          </div>
+        </div>
+        <ul
+          class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
+        >
+          <li>
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href="#about"
+            >
+              About
+            </a>
+          </li>
 
-      <ul
-        class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
-      >
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75"
-            href="#about"
-          >
-            About
-          </a>
-        </li>
+          <li>
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href="/graphene-nano-technology"
+            >
+              Quality
+            </a>
+          </li>
 
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75"
-            href="/graphene-nano-technology"
-          >
-            Quality
-          </a>
-        </li>
+          <li>
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href="/colors"
+            >
+              Colors
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href="/range"
+            >
+              Pools
+            </a>
+          </li>
 
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75"
-            href="/colors"
-          >
-            Colors
-          </a>
-        </li>
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75"
-            href="/range"
-          >
-            Pools
-          </a>
-        </li>
-
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/contact">
-            Contact
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a
+              class="text-gray-700 transition hover:text-gray-700/75"
+              href="/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">

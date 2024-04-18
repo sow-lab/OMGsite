@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Valentina",
+    "mainImage": "small-valentina-fitzgerald-hero.jpg",
+    "category": "Our Current Best Selling Pools",
+    "dimension1": "14’5” X 27’7”",
+    "dimension2": "Depth: 3’3” - 5’10”",
+    "subTitle": "Piazza Series",
+    "text": "The modern, geometric style of the Valentina will complement any outdoor area. Ideal for family entertaining, this contemporary pool offers a generous swimming area and plenty of seating for relaxation.",
+    "sizeImage": "1-200-drawing2018-us-market_valentina-1.png",
+    "liText": [
+      "Unobtrusive side entry steps",
+      "Extended full-length bench seat",
+      "Generous swimming area",
+      "Ideal for laps or family entertaining"
+    ],
+    "footerLinks": [
+      {
+        "link": "Alto",
+        "imageUrl": "alto-updated1.png"
+      },
+      {
+        "link": "Latina",
+        "imageUrl": "1-200-drawing2018-us-market-larger_latina-1.png"
+      },
+      {
+        "link": "Avellino",
+        "imageUrl": "1-200-drawing2018_avellino.png"
+      },
+      {
+        "link": "Palazzo",
+        "imageUrl": "1-200-drawing2018_palazzo.png"
+      },
+      {
+        "link": "Siena",
+        "imageUrl": "1-200-drawing2018_siena.png"
+      },
+      {
+        "link": "Torino",
+        "imageUrl": "1-200-drawing2018_torino.png"
+      }
+    ]
+  },
+  {
+    "name": "Empire",
+    "mainImage": "empire-portfolio-main.jpg",
+    "category": "Our Current Best Selling Pools",
+    "dimension1": "11’2” X 21’",
+    "dimension2": "Depth: 3’4” - 5’9”",
+    "subTitle": "Royal Series",
+    "text": "One of our most popular pools, the Empire is designed to save space whilst still offering a generous swimming area. Incorporating an attractive, geometric, slim-line shape and unobtrusive side entry steps, this pool offers the maximum swimming area while still fitting perfectly into smaller backyards.",
+    "sizeImage": "1-200-drawing2018-us-market_empire-1.png",
+    "liText": [
+      "Space saving design",
+      "Unobtrusive side entry steps",
+      "Extended full-length bench seat",
+      "Popular geometric design"
+    ],
+    "footerLinks": [
+      {
+        "link": "Sovereign",
+        "imageUrl": "1-200-drawing2018_sovereign.png"
+      },
+      {
+        "link": "Oxford",
+        "imageUrl": "1-200-drawing2018_oxford.png"
+      }
+    ]
+  },
+  {
+    "name": "Grandeur",
+    "mainImage": "grandeur-awards.jpg",
+    "category": "Our Current Best Selling Pools",
+    "dimension1": "14’6” X 28’4”",
+    "dimension2": "Depth: 3’4” - 6’1”",
+    "subTitle": "Majestic Series",
+    "text": "A popular and contemporary design that is sure to turn heads, the Grandeur features a safety ledge for added safety, stylish step entrance and a deep-end corner swim-out. ",
+    "sizeImage": "1-200-drawing2018-us-market_granduer-1.png",
+    "liText": [
+      "Safety ledge provides rest point",
+      "Wide entry steps",
+      "Enter at shallow or deep end",
+      "Extra-large second step",
+      "Simple yet practical design"
+    ],
+    "footerLinks": [
+      {
+        "link": "Regal",
+        "imageUrl": "1-200-drawing2018-us-market-larger_regal.png"
+      }
+    ]
+  },
+  {
+    "name": "Saint-Remy",
+    "mainImage": "saint-remy.jpg",
+    "category": "Our Current Best Selling Pools",
+    "dimension1": "13’1” X 26’3”",
+    "dimension2": "Depth: 4’4” - 6’5”",
+    "subTitle": "Resort Series",
+    "text": "The Saint-Remy is a Pool+Spa combination that gives you both swimming and relaxation zones within a single shell. Holiday at home with your own indulgent pool and spa experience. ",
+    "sizeImage": "1-200-drawing2018-us-market-larger_saint-remy-1.png",
+    "liText": [
+      "Popular Pool + Spa Combination",
+      "Shallow entry zone with large second entry step area",
+      "2m x 1.86m spa zone easily seats 6 adults",
+      "Wide extended bench seat",
+      "Spillway from spa into pool"
+    ],
+    "footerLinks": [
+      {
+        "link": "Saint-Louis",
+        "imageUrl": "1-200-drawing2018-us-market-larger_saint-louis-1.png"
+      },
+      {
+        "link": "Saint-Grande",
+        "imageUrl": "us-pool-outlinesexternal-white_saint-grande-updated.png"
+      }
+    ]
+  }
+]
