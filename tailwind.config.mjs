@@ -17,6 +17,11 @@ export default {
       animation: {
         "fade-in": "fade-in 0.5s ease-in-out",
       },
+      colors: {
+        sky: {
+          950: "#0d2a4c",
+        },
+      },
     },
   },
   plugins: [],
