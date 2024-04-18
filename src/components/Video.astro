@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+
+import posterimage from "../assets/video_poster.jpg";
+---
+
 <div class="mx-auto max-w-6xl py-10">
-  <video autoplay loop muted><source src="./Slider.mp4" type="video/mp4" /></video>
+  <video autoplay loop muted poster={posterimage}><source src="./Slider.mp4" type="video/mp4"/></video>
 </div>
