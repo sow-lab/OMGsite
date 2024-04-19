@@ -41,14 +41,14 @@ function sortObjectsByCategory(objects: Pool[]) {
 const sortedByCategoryArray: Pool[][] = sortObjectsByCategory(json as Pool[]);
 
 ---
-<div class="mx-auto max-w-6xl border my-10">
+<div class="mx-auto max-w-6xl border md:my-10">
 {
     sortedByCategoryArray.map((category) => (
-      <div class="my-4  px-2">
-        <h2 id={category[0].category} class="scroll-mt-10 py-6 text-3xl font-semibold tracking-tight first:mt-0 capitalize mb-2">
+      <div class="px-2 max-w-lg">
+        <h2 id={category[0].category} class="scroll-mt-10 md:py-6 text-3xl font-semibold tracking-tight first:mt-0 capitalize mb-2">
           {category[0].category} Pools
         </h2>
-        <ul class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {category.map(async (pool) => {
             const imageSrc =
               await images[`/src/assets/pool_images/${pool.mainImage}`]();
@@ -61,7 +61,7 @@ const sortedByCategoryArray: Pool[][] = sortObjectsByCategory(json as Pool[]);
             }));
             return (
               <li onclick={`window.${pool.name.replace(/[-\s]/g, '').toLowerCase()}.showModal(); document.body.classList.add('overflow-hidden')`})
-              class="aspect-video hover:cursor-pointer group">
+              class="aspect-video hover:cursor-pointer group pb-2">
                   <Image
                     class="h-full w-full object-cover group-hover:brightness-75 transition-all duration-300 ease-in-out"
                     src={imageSrc.default}
@@ -78,5 +78,4 @@ const sortedByCategoryArray: Pool[][] = sortObjectsByCategory(json as Pool[]);
       </div>
     ))
   }
-      
 </div>

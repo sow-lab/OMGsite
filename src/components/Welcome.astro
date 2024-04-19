@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import business from "../assets/business.jpg";
+---
+
+<div class="flex flex-col items-center w-full border md:my-10">
+  <div class="max-w-lg px-2">
+    <h2
+      class="scroll-mt-10 md:py-6 text-3xl font-semibold tracking-tight first:mt-0 capitalize mb-2"
+    >
+      Freedom Fiberglass Pools
+    </h2>
+    <p class="my-4 text-gray-600">
+      We have made over 70,000 pools TODO and are proud to have an innovative
+      range of designs, colors and surface finishes. You can choose from 30 pool
+      models from small to large, in 10 stunning pool colors and all with
+      superior ColorGuard surface protection. We have been leading the industry
+      in product development and technology to ensure every Aqua Technics
+      fiberglass pool is built stronger to last longer. release models. TODO
+    </p>
+    <div>
+      <Image
+        class="object-contain w-full h-full"
+        src={business}
+        alt="picture of our company"
+      />
+    </div>
+    <div class="flex gap-2 justify-evenly w-full my-4">
+      <a
+        href="/range"
+        class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-xl text-white bg-sky-950 rounded-md hover:bg-sky-800 sm:w-auto sm:mb-0"
+      >
+        Pools
+      </a>
+      <a
+        href="/colors"
+        class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-xl text-white bg-sky-950 rounded-md hover:bg-sky-800 sm:w-auto sm:mb-0"
+      >
+        Colors
+      </a>
+    </div>
+  </div>
+</div>
