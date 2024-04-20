@@ -6,15 +6,19 @@ import Welcome from "../components/Welcome.astro";
 import Map from "../components/Map.astro";
 import Video from "../components/Video.astro";
 import Pools from "../components/Pools.astro";
+import Services from "../components/Services.astro";
+import Testimonials from "../components/Testimonials.astro";
 ---
 
 <Layout>
   <Hero />
+  <Services />
   <About />
   <Video />
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
     <Welcome />
     <Pools />
   </div>
+  <Testimonials />
   <Map />
 </Layout>
